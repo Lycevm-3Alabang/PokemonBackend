@@ -10,13 +10,16 @@ namespace PokemonBackendListOnly
     }
     public class ListPokemonRepository : IPokemonRepository
     {
-        private List<AlmostAPokemon> _pokemons = new List<AlmostAPokemon>()
-        {
-            new AlmostAPokemon { Key = "1", Description = "Pikachu" },
-            new AlmostAPokemon { Key = "2", Description = "Charmander" },
-            new AlmostAPokemon { Key = "3", Description = "Bulbasaur" },
-            new AlmostAPokemon { Key = "4", Description = "Squirtle" }
-        };
+        private static List<AlmostAPokemon> _pokemons = new List<AlmostAPokemon>()
+    {
+        new AlmostAPokemon { Key = "1", Description = "Pikachu" },
+        new AlmostAPokemon { Key = "2", Description = "Charmander" },
+        new AlmostAPokemon { Key = "3", Description = "Bulbasaur" },
+        new AlmostAPokemon { Key = "4", Description = "Squirtle" }
+    };
+
+
+
 
         public async Task<GetPokemonDTO> AddPokemonAsync(AddPokemonDTO pokemon)
         {
